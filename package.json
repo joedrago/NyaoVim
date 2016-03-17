@@ -7,8 +7,8 @@
   "bin": "./bin/cli.js",
   "scripts": {
     "dep": "npm install && bower install && typings install",
-    "build-main": "tsc --pretty -p $(npm prefix)/main",
-    "build-renderer": "tsc --pretty -p $(npm prefix)/renderer",
+    "build-main": "tsc -p main",
+    "build-renderer": "tsc -p renderer",
     "build": "npm run build-main && npm run build-renderer",
     "lint": "tslint $(git ls-files | grep -E \".ts$\")",
     "app": "electron $(npm prefix)",
